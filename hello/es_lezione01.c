@@ -2,11 +2,11 @@
 int main()
 {
 	char nome[40], cognome[40];
-	printf("inserisci il tuo nome: ");
+	printf("enter your name: ");
 	scanf("%s", nome);
-	printf("\ninserisci il tuo cognome: ");
+	printf("\nenter your surname: ");
 	scanf("%s", cognome);
-	printf("\nbenvenuto, %s %s!\nGrazie per aver usato il nostro programma.\nTi auguriamo Buone Feste", nome, cognome);
+	printf("\n Welcome, %s %s!\nThank you for using our program.\n We wish you a Merry Christmas and a Happy New Year", nome, cognome);
 	printf("\n\n\t   \n\t  *\n\t ***\n\t*****\n\t  *");
 	
 	return 0;
