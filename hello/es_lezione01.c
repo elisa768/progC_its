@@ -7,7 +7,7 @@ int main()
 	printf("\ninserisci il tuo cognome: ");
 	scanf("%s", cognome);
 	printf("\nbenvenuto, %s %s!\nGrazie per aver usato il nostro programma.\nTi auguriamo Buone Feste", nome, cognome);
-	printf("\n\n\t   \n\t  *\n\t **\n\t***\n\t  *");
+	printf("\n\n\t   \n\t  *\n\t ***\n\t*****\n\t  *");
 	
 	return 0;
 }
