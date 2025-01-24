@@ -12,28 +12,62 @@ R5, 40% di materiale recuperabile
 
 #include <stdio.h>
 #include <string.h>
-#define stampa_nome(nome) scanf("%s", nome)
-#define stampa_cognome(cognome) scanf("%s", cognome)
+#define Nome "Elisa Scantamburlo"
+#define stampa_nome printf("%s\n",Nome)
 #define R1 0.85
 #define R2 0.75
 #define R3 0.65
 #define R4 0.50
 #define R5 0.40
+#define NEW_LINE printf("\n")
 
 int main(){
+    stampa_nome;
+    char categoria[3];
+    printf("Inserisci categoria: ");
+    scanf("%2s", categoria);
+
+    double quantita=0;
+    printf("Inserisci quantita': ");
+    scanf("%lf", &quantita);
+
+    NEW_LINE;
     
-    /*char nome[40], cognome[40];
-    printf("Inserisci nome: ");
-    stampa_nome(nome);
-    printf("Inserisci cognome: ");
-    stampa_cognome(cognome);*/
-    double quantita;
-    double categoria;
-    scanf("Inserisci categoria: %lf",&categoria);
-    scanf("Inserisci quantità: %lf",&quantita); // lf è long float
-    double recuperabile = categoria*quantita;
-    double irrecuperabile = quantita-recuperabile;
-    printf("Recuperabile: %f", recuperabile);
-    printf("Non recuperabile: %f", irrecuperabile);
+    printf("%.2lf", quantita);
+
+    NEW_LINE;
+
+    if (strcmp(categoria, "R1")==0) {
+        printf("quantita' recuperabile: %.2lf", R1*quantita);
+        NEW_LINE;
+        printf("quantita' irrecuperabile: %.2lf", (1-R1)*quantita);
+    }
+
+    else if (strcmp(categoria, "R2")==0) {
+        printf("quantita' recuperabile: %.2lf", R2*quantita);
+        NEW_LINE;
+        printf("quantita' irrecuperabile: %.2lf", (1-R2)*quantita);
+    }
+
+    else if (strcmp(categoria, "R3")==0) {
+        printf("quantita' recuperabile: %.2lf", R3*quantita);
+        NEW_LINE;
+        printf("quantita' irrecuperabile: %.2lf", (1-R3)*quantita);
+    }
+
+    else if (strcmp(categoria, "R4")==0) {
+        printf("quantita' recuperabile: %.2lf", R4*quantita);
+        NEW_LINE;
+        printf("quantita' irrecuperabile: %.2lf", (1-R4)*quantita);
+    }
+
+    else if (strcmp(categoria, "R5")==0) {
+        printf("quantita' recuperabile: %.2lf", R5*quantita);
+        NEW_LINE;
+        printf("quantita' irrecuperabile: %.2lf", (1-R5)*quantita);
+    }
+
+    NEW_LINE;
+
     return 0;
 }
