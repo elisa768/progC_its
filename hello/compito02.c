@@ -27,47 +27,55 @@ int main(){
     printf("Inserisci categoria: ");
     scanf("%2s", categoria);
 
-    double quantita=0;
-    printf("Inserisci quantita': ");
-    scanf("%lf", &quantita);
-
-    NEW_LINE;
+    if (strcmp(categoria,"R1")!=0 && strcmp(categoria,"R2")!=0 && strcmp(categoria,"R3")!=0 && strcmp(categoria,"R4")!=0 && strcmp(categoria,"R5")!=0) {
+        printf("Categoria non valida\n");
+        return 1;
+    }
     
-    printf("%.2lf", quantita);
+    else {
+        double quantita=0;
+        printf("Inserisci quantita': ");
+        scanf("%lf", &quantita);
 
-    NEW_LINE;
-
-    if (strcmp(categoria, "R1")==0) {
-        printf("quantita' recuperabile: %.2lf", R1*quantita);
         NEW_LINE;
-        printf("quantita' irrecuperabile: %.2lf", (1-R1)*quantita);
-    }
+    
+        printf("%.2lf", quantita);
 
-    else if (strcmp(categoria, "R2")==0) {
-        printf("quantita' recuperabile: %.2lf", R2*quantita);
         NEW_LINE;
-        printf("quantita' irrecuperabile: %.2lf", (1-R2)*quantita);
-    }
 
-    else if (strcmp(categoria, "R3")==0) {
-        printf("quantita' recuperabile: %.2lf", R3*quantita);
-        NEW_LINE;
-        printf("quantita' irrecuperabile: %.2lf", (1-R3)*quantita);
-    }
+    
 
-    else if (strcmp(categoria, "R4")==0) {
-        printf("quantita' recuperabile: %.2lf", R4*quantita);
-        NEW_LINE;
-        printf("quantita' irrecuperabile: %.2lf", (1-R4)*quantita);
-    }
+        if (strcmp(categoria, "R1")==0) {
+            printf("quantita' recuperabile: %.2lf", R1*quantita);
+            NEW_LINE;
+            printf("quantita' irrecuperabile: %.2lf", (1-R1)*quantita);
+        }
 
-    else if (strcmp(categoria, "R5")==0) {
-        printf("quantita' recuperabile: %.2lf", R5*quantita);
-        NEW_LINE;
-        printf("quantita' irrecuperabile: %.2lf", (1-R5)*quantita);
-    }
+        else if (strcmp(categoria, "R2")==0) {
+            printf("quantita' recuperabile: %.2lf", R2*quantita);
+            NEW_LINE;
+            printf("quantita' irrecuperabile: %.2lf", (1-R2)*quantita);
+        }
 
-    NEW_LINE;
+        else if (strcmp(categoria, "R3")==0) {
+            printf("quantita' recuperabile: %.2lf", R3*quantita);
+            NEW_LINE;
+            printf("quantita' irrecuperabile: %.2lf", (1-R3)*quantita);
+        }
+
+        else if (strcmp(categoria, "R4")==0) {
+            printf("quantita' recuperabile: %.2lf", R4*quantita);
+            NEW_LINE;
+            printf("quantita' irrecuperabile: %.2lf", (1-R4)*quantita);
+        }
+
+        else if (strcmp(categoria, "R5")==0) {
+            printf("quantita' recuperabile: %.2lf", R5*quantita);
+            NEW_LINE;
+            printf("quantita' irrecuperabile: %.2lf", (1-R5)*quantita);
+        }
+    }
+    
 
     return 0;
 }
