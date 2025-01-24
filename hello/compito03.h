@@ -8,5 +8,6 @@
 #define molt(x,y) x*y
 #define div(x,y) x/y
 #define mod(x,y) x%y
+#endif
 
-#endif _DEFINE_H_
+
