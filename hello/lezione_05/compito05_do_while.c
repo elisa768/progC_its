@@ -15,50 +15,18 @@ verificare che l'input sia valido (solo numeri interi positivi)
 #include <time.h>
 #include <stdlib.h>
 
-int main()
-{
+int main(){
+    int numero = rand() % 100;
+    int x, conteggio=0;
+    do {
+        printf("Inserisci numero: ");
+        scanf("%d", &x);
+        if (x>numero) printf("Numero troppo grande\n");
+        else if (x<numero) printf("Numero troppo piccolo\n");
+        conteggio++;
+    } while (x!=numero);
 
-    // inizializzazione dei numeri casuali
-    srand(time(NULL));
-
-    // generazione del numero casuale
-    int numeroSegreto = rand() % 100 + 1;
-    int numeroInserito = 0;
-    int contatoreTentativi = 0;
-
-    // ciclo per gestire il tentativi
-    do
-    {
-        printf("Inserisci un numero: ");
-        int ret = scanf("%d", &numeroInserito);
-
-        if (ret == 1 && numeroInserito >= 1 && numeroInserito <= 100)
-        {
-            printf("Tentativo: %d\n", ++contatoreTentativi);
-
-
-            if (numeroInserito < numeroSegreto)
-            {
-                printf("Il numero inserito e' troppo piccolo\n");
-            }
-            else if (numeroInserito > numeroSegreto)
-            {
-                printf("Il numero inserito e' troppo grande\n");
-            }
-            else
-            {
-                printf("Il numero inserito e' esattamente uguale al numero segreto\n");
-                printf("Complimenti hai indovinato in %d tentativi\n", contatoreTentativi);
-            }
-        }
-        else 
-        {
-            // valore inserito non corretto
-            printf("Valore inserito non valido\n");
-        }
-        fseek(stdin, 0, SEEK_END);
-
-    } while (numeroInserito != numeroSegreto);
-
+    printf("Hai indovinato\n");
+    printf("Numero di tentativi %d", conteggio);
     return 0;
 }
