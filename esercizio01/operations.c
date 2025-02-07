@@ -10,6 +10,7 @@ int mul(int a, int b){
     return a*b;
 };
 float divi(int a, int b){
+    //since it's not possible to divide by 0, we are stating this case
     if (b==0) {
         printf("Errore");
         return -1;
@@ -17,6 +18,7 @@ float divi(int a, int b){
     return a/b;
 };
 int mod(int a, int b){
+    //since it's not possible to divide by 0, the module where the second term is 0 is not allowed as an operation
     if (b==0){
         printf("Errore");
         return -1;
