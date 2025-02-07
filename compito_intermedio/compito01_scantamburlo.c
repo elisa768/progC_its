@@ -39,6 +39,6 @@ int main(){
     scanf("%d",&number1);
     printf("Inserire il secondo numero: ");
     scanf("%d",&number2); 
-   // printf("1. Addizione\n2. Sottrazione\n3. Moltiplicazione\n4. Divisione\n5. Modulo\n6. Potenza\n7. Test di tutte le funzioni\n8. Esci\n");   
+    printf("1. Addizione\n2. Sottrazione\n3. Moltiplicazione\n4. Divisione\n5. Modulo\n6. Potenza\n7. Test di tutte le funzioni\n8. Esci\n");   
     return 0;
 }
