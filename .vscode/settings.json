@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "array": "c",
+        "stdio.h": "c"
+    }
+}
